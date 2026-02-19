@@ -1,0 +1,468 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "userName": "alice"
+      },
+      "eventTime": "2024-06-15T08:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+      "requestParameters": null,
+      "responseElements": {"ConsoleLogin": "Success"},
+      "eventID": "e1000001-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsConsoleSignIn",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "userName": "alice"
+      },
+      "eventTime": "2024-06-15T08:05:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/AdminRole",
+        "roleSessionName": "alice-admin-session"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAEXAMPLEKEY1",
+          "expiration": "2024-06-15T12:05:00Z"
+        },
+        "assumedRoleUser": {
+          "assumedRoleId": "AROAEXAMPLEROLE1:alice-admin-session",
+          "arn": "arn:aws:sts::123456789012:assumed-role/AdminRole/alice-admin-session"
+        }
+      },
+      "eventID": "e1000002-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAEXAMPLEROLE1:alice-admin-session",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AdminRole/alice-admin-session",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-06-15T08:10:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "bucketName": "company-data-lake",
+        "key": "reports/quarterly-2024-q2.csv"
+      },
+      "responseElements": null,
+      "eventID": "e1000003-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAEXAMPLEROLE1:alice-admin-session",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AdminRole/alice-admin-session",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-06-15T08:12:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "bucketName": "company-data-lake",
+        "key": "uploads/alice-upload-2024-06-15.json"
+      },
+      "responseElements": null,
+      "eventID": "e1000004-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER2",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-06-15T09:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "198.51.100.25",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "e1000005-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER2",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-06-15T09:15:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "198.51.100.25",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "eventID": "e1000006-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER3",
+        "arn": "arn:aws:iam::123456789012:user/mallory",
+        "accountId": "123456789012",
+        "userName": "mallory"
+      },
+      "eventTime": "2024-06-15T10:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "192.0.2.50",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "userName": "backdoor-admin"
+      },
+      "responseElements": {
+        "user": {
+          "userName": "backdoor-admin",
+          "userId": "AIDAEXAMPLEBACKDOOR",
+          "arn": "arn:aws:iam::123456789012:user/backdoor-admin",
+          "createDate": "2024-06-15T10:00:00Z"
+        }
+      },
+      "eventID": "e1000007-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER3",
+        "arn": "arn:aws:iam::123456789012:user/mallory",
+        "accountId": "123456789012",
+        "userName": "mallory"
+      },
+      "eventTime": "2024-06-15T10:01:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "192.0.2.50",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "userName": "backdoor-admin",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "eventID": "e1000008-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER3",
+        "arn": "arn:aws:iam::123456789012:user/mallory",
+        "accountId": "123456789012",
+        "userName": "mallory"
+      },
+      "eventTime": "2024-06-15T10:05:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "192.0.2.50",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "name": "arn:aws:cloudtrail:us-east-1:123456789012:trail/management-trail"
+      },
+      "responseElements": null,
+      "eventID": "e1000009-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER4",
+        "arn": "arn:aws:iam::123456789012:user/eve",
+        "accountId": "123456789012",
+        "userName": "eve"
+      },
+      "eventTime": "2024-06-15T06:30:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.99",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "requestParameters": null,
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "errorCode": "Failed authentication",
+      "errorMessage": "No username found in supplied account",
+      "eventID": "e1000010-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsConsoleSignIn",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER4",
+        "arn": "arn:aws:iam::123456789012:user/eve",
+        "accountId": "123456789012",
+        "userName": "eve"
+      },
+      "eventTime": "2024-06-15T06:31:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.99",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "requestParameters": null,
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "errorCode": "Failed authentication",
+      "errorMessage": "Incorrect username or password",
+      "eventID": "e1000011-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsConsoleSignIn",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER4",
+        "arn": "arn:aws:iam::123456789012:user/eve",
+        "accountId": "123456789012",
+        "userName": "eve"
+      },
+      "eventTime": "2024-06-15T06:32:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.99",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "requestParameters": null,
+      "responseElements": {"ConsoleLogin": "Failure"},
+      "errorCode": "Failed authentication",
+      "errorMessage": "Incorrect username or password",
+      "eventID": "e1000012-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsConsoleSignIn",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER2",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-06-15T11:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "eu-west-1",
+      "sourceIPAddress": "198.51.100.25",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "instanceType": "m5.xlarge",
+        "imageId": "ami-0abcdef1234567890",
+        "minCount": 1,
+        "maxCount": 1
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "i-0abcdef1234567890",
+              "instanceType": "m5.xlarge",
+              "launchTime": "2024-06-15T11:00:00Z"
+            }
+          ]
+        }
+      },
+      "eventID": "e1000013-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER1",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "userName": "alice"
+      },
+      "eventTime": "2024-06-15T12:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.10",
+      "userAgent": "aws-sdk-java/2.20.0",
+      "requestParameters": {
+        "bucketName": "company-data-lake",
+        "key": "config/database-credentials.json"
+      },
+      "responseElements": null,
+      "eventID": "e1000014-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AWSService",
+        "principalId": "AIDAEXAMPLELAMBDA",
+        "arn": "arn:aws:iam::123456789012:role/lambda-execution-role",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-06-15T13:00:00Z",
+      "eventSource": "dynamodb.amazonaws.com",
+      "eventName": "PutItem",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "dynamodb.amazonaws.com",
+      "userAgent": "aws-sdk-python/1.34.0",
+      "requestParameters": {
+        "tableName": "user-sessions"
+      },
+      "responseElements": null,
+      "eventID": "e1000015-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER3",
+        "arn": "arn:aws:iam::123456789012:user/mallory",
+        "accountId": "123456789012",
+        "userName": "mallory"
+      },
+      "eventTime": "2024-06-15T10:10:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "192.0.2.50",
+      "userAgent": "aws-cli/2.15.0 Python/3.11.6",
+      "requestParameters": {
+        "userName": "backdoor-admin"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "backdoor-admin",
+          "accessKeyId": "AKIAEXAMPLEBACKDOOR",
+          "status": "Active",
+          "createDate": "2024-06-15T10:10:00Z"
+        }
+      },
+      "eventID": "e1000016-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER5",
+        "arn": "arn:aws:iam::123456789012:user/charlie",
+        "accountId": "123456789012",
+        "userName": "charlie"
+      },
+      "eventTime": "2024-06-15T14:00:00Z",
+      "eventSource": "kms.amazonaws.com",
+      "eventName": "Decrypt",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.1.50",
+      "userAgent": "aws-sdk-go/1.44.0",
+      "requestParameters": {
+        "encryptionContext": {
+          "aws:lambda:FunctionArn": "arn:aws:lambda:us-east-1:123456789012:function:data-processor"
+        }
+      },
+      "responseElements": null,
+      "eventID": "e1000017-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEUSER2",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-06-15T15:00:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "198.51.100.25",
+      "userAgent": "console.ec2.amazonaws.com",
+      "requestParameters": {
+        "groupId": "sg-0abcdef1234567890",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 22,
+              "toPort": 22,
+              "ipRanges": {"items": [{"cidrIp": "0.0.0.0/0"}]}
+            }
+          ]
+        }
+      },
+      "responseElements": {"_return": true},
+      "eventID": "e1000018-aaaa-bbbb-cccc-dddddddddddd",
+      "eventType": "AwsApiCall",
+      "recipientAccountId": "123456789012"
+    }
+  ]
+}
